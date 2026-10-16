@@ -9,6 +9,7 @@
 <meta property="og:description" content="Coaching for salon, med spa and dental owners. Systems that grew a spa from $270K to $3M.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#5F47BF">
+<meta name="color-scheme" content="light">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="description" content="Coaching for salon, med spa and dental owners. Systems that grew a spa from $270K to $3M. Book a free 15-minute call.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,15 +47,6 @@
   --body: "Manrope", "Segoe UI", system-ui, sans-serif;
   --radius: 18px;
   --shadow: 0 1px 2px rgba(60,40,140,.06), 0 12px 32px -12px rgba(60,40,140,.18);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #14111E; --surface: #1C182A; --lav: #262040; --lav-strong: #3A3163;
-    --accent: #B9A8FF; --accent-ink: #17122A; --ink: #F1EEFA; --muted: #A9A2C3;
-    --line: #2E2844; --card: #1F1A2F; --note: #3D3311; --note-ink: #FBE7A6;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -12px rgba(0,0,0,.6);
-    color-scheme: dark;
-  }
 }
 :root[data-theme="dark"] {
   --bg: #14111E; --surface: #1C182A; --lav: #262040; --lav-strong: #3A3163;
@@ -600,7 +592,7 @@ body.show-notes .notes-toggle .pip { background: #F5C84B; }
   // Theme toggle
   document.getElementById('themeBtn').addEventListener('click', function () {
     var cur = root.getAttribute('data-theme');
-    var dark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var dark = cur === 'dark';
     root.setAttribute('data-theme', dark ? 'light' : 'dark');
   });
 
