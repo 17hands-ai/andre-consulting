@@ -1,0 +1,672 @@
+<title>Andre Business Consulting</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Coaching for salon, med spa and dental owners. Systems that grew a spa from $270K to $3M. Book a free 15-minute call.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Andre Business Consulting",
+  "url": "https://www.andrecoach.com",
+  "description": "Business coaching for salon, spa and dental practice owners.",
+  "email": "hello@andrecoach.com",
+  "areaServed": "United States",
+  "address": {"@type": "PostalAddress", "addressLocality": "Oakland", "addressRegion": "CA"},
+  "founder": {"@type": "Person", "name": "[Full name]", "jobTitle": "Business Coach"}
+}
+</script>
+<style>
+/* Layout: lavender-tinted bands; asymmetric hero with the $270K→$3M growth curve as the proof object; centered column ~72rem */
+:root {
+  --bg: #FBFAFE;
+  --surface: #F3F0FB;
+  --lav: #E7E1F9;
+  --lav-strong: #CDC2F2;
+  --accent: #5F47BF;
+  --accent-ink: #FFFFFF;
+  --ink: #221B38;
+  --muted: #5D5677;
+  --line: #E2DCF2;
+  --card: #FFFFFF;
+  --note: #FFF3C9;
+  --note-ink: #5A4400;
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --body: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --radius: 18px;
+  --shadow: 0 1px 2px rgba(60,40,140,.06), 0 12px 32px -12px rgba(60,40,140,.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14111E; --surface: #1C182A; --lav: #262040; --lav-strong: #3A3163;
+    --accent: #B9A8FF; --accent-ink: #17122A; --ink: #F1EEFA; --muted: #A9A2C3;
+    --line: #2E2844; --card: #1F1A2F; --note: #3D3311; --note-ink: #FBE7A6;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -12px rgba(0,0,0,.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14111E; --surface: #1C182A; --lav: #262040; --lav-strong: #3A3163;
+  --accent: #B9A8FF; --accent-ink: #17122A; --ink: #F1EEFA; --muted: #A9A2C3;
+  --line: #2E2844; --card: #1F1A2F; --note: #3D3311; --note-ink: #FBE7A6;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -12px rgba(0,0,0,.6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--bg); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.1; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.4rem, 5.4vw, 4.1rem); }
+h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); }
+h3 { font-size: 1.35rem; font-weight: 600; }
+p { margin: 0; }
+em { font-style: italic; }
+
+.wrap { max-width: 72rem; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+section { padding-block: clamp(4rem, 8vw, 6.5rem); }
+.band { background: var(--surface); }
+.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.lede { color: var(--muted); font-size: 1.15rem; max-width: 38rem; }
+.section-head { display: grid; gap: .9rem; margin-bottom: 2.75rem; max-width: 44rem; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.4rem; border-radius: 999px; font: 600 1rem var(--body); text-decoration: none; border: 1.5px solid transparent; cursor: pointer; transition: transform .15s ease, background .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-ghost { border-color: var(--lav-strong); color: var(--ink); background: transparent; }
+.btn-ghost:hover { background: var(--lav); }
+
+/* Header */
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 4.25rem; }
+.brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+.brand-mark { width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--lav); display: grid; place-items: center; font-family: var(--display); font-size: 1.15rem; color: var(--accent); border: 1px solid var(--lav-strong); }
+.brand-name { font-weight: 700; font-size: 1rem; line-height: 1.15; }
+.brand-name small { display: block; font-weight: 500; font-size: .75rem; color: var(--muted); letter-spacing: .02em; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; margin: 0; padding: 0; font-size: .95rem; font-weight: 500; }
+.nav-links a { text-decoration: none; color: var(--muted); }
+.nav-links a:hover { color: var(--ink); }
+.nav-right { display: flex; align-items: center; gap: .6rem; }
+.icon-btn { width: 2.5rem; height: 2.5rem; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; }
+.icon-btn svg { width: 1.1rem; height: 1.1rem; }
+.menu-btn { display: none; }
+.nav .btn { padding: .6rem 1.1rem; font-size: .92rem; }
+@media (max-width: 900px) {
+  .nav-links { display: none; position: absolute; left: 0; right: 0; top: 4.25rem; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: .5rem max(20px, env(safe-area-inset-right, 0px)) 1rem max(20px, env(safe-area-inset-left, 0px)); }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding: .8rem 0; border-bottom: 1px solid var(--line); color: var(--ink); }
+  .menu-btn { display: grid; }
+  .nav .btn.hide-sm { display: none; }
+}
+
+/* Hero */
+.hero { padding-block: clamp(3rem, 7vw, 5.5rem) clamp(3.5rem, 7vw, 6rem); position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; width: 46rem; height: 46rem; right: -14rem; top: -18rem; border-radius: 50%; background: radial-gradient(circle, var(--lav) 0%, transparent 68%); z-index: -1; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.hero-copy { display: grid; gap: 1.5rem; min-width: 0; }
+.hero h1 em { color: var(--accent); }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; color: var(--muted); font-size: .92rem; }
+.hero-meta span { display: inline-flex; align-items: center; gap: .4rem; }
+.hero-meta svg { width: 1rem; height: 1rem; color: var(--accent); }
+.proof-card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); padding: 1.6rem; display: grid; gap: 1rem; min-width: 0; }
+.proof-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.proof-label { font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.proof-num { font-family: var(--display); font-size: clamp(2.2rem, 4vw, 2.9rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.proof-num span { color: var(--muted); font-size: .55em; margin: 0 .25em; }
+.proof-chart { width: 100%; height: auto; display: block; }
+.proof-chart .area { fill: var(--lav); }
+.proof-chart .line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 600; stroke-dashoffset: 0; animation: draw 1.6s ease-out .2s backwards; }
+.proof-chart .grid { stroke: var(--line); stroke-width: 1; }
+.proof-chart .dot { fill: var(--card); stroke: var(--accent); stroke-width: 3; }
+.proof-chart text { fill: var(--muted); font: 600 12px var(--body); }
+@keyframes draw { from { stroke-dashoffset: 600; } }
+.proof-foot { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.proof-foot div { font-size: .82rem; color: var(--muted); line-height: 1.35; }
+.proof-foot strong { display: block; font-size: 1.05rem; color: var(--ink); font-weight: 700; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+/* Audience */
+.aud-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.aud { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; display: grid; gap: .8rem; align-content: start; }
+.aud-icon { width: 3rem; height: 3rem; border-radius: 14px; background: var(--lav); color: var(--accent); display: grid; place-items: center; }
+.aud-icon svg { width: 1.5rem; height: 1.5rem; }
+.aud p { color: var(--muted); font-size: .98rem; }
+.aud ul { margin: .25rem 0 0; padding: 0; list-style: none; display: grid; gap: .4rem; font-size: .93rem; }
+.aud li { display: flex; gap: .55rem; }
+.aud li::before { content: ""; flex: none; width: .45rem; height: .45rem; border-radius: 50%; background: var(--lav-strong); margin-top: .55rem; }
+@media (max-width: 860px) { .aud-grid { grid-template-columns: 1fr; } }
+
+/* Method */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; counter-reset: step; }
+.step { border-top: 2px solid var(--lav-strong); padding-top: 1.25rem; display: grid; gap: .55rem; align-content: start; }
+.step-n { font-family: var(--display); font-style: italic; color: var(--accent); font-size: 1.1rem; }
+.step p { color: var(--muted); font-size: .96rem; }
+@media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+
+/* Packages */
+.pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: stretch; }
+.pkg { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 1.1rem; position: relative; }
+.pkg.featured { border: 2px solid var(--accent); box-shadow: var(--shadow); }
+.pkg-tag { position: absolute; top: -.8rem; left: 1.75rem; background: var(--accent); color: var(--accent-ink); font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 999px; }
+.pkg-for { font-size: .9rem; color: var(--muted); }
+.pkg-price { font-family: var(--display); font-size: 1.9rem; line-height: 1; }
+.pkg-price small { font-family: var(--body); font-size: .85rem; color: var(--muted); margin-left: .25rem; }
+.pkg-len { display: inline-flex; width: fit-content; gap: .4rem; align-items: center; background: var(--lav); color: var(--ink); font-size: .82rem; font-weight: 600; border-radius: 999px; padding: .3rem .75rem; }
+.pkg ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; font-size: .95rem; flex: 1; }
+.pkg li { display: flex; gap: .6rem; }
+.pkg li svg { flex: none; width: 1.1rem; height: 1.1rem; color: var(--accent); margin-top: .25rem; }
+.pkg .btn { width: 100%; }
+@media (max-width: 900px) { .pkg-grid { grid-template-columns: 1fr; max-width: 32rem; } }
+
+/* Case study */
+.case { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.case-copy { display: grid; gap: 1.25rem; min-width: 0; }
+.timeline { display: grid; gap: 0; border-left: 2px solid var(--lav-strong); margin-left: .5rem; }
+.tl { position: relative; padding: 0 0 1.75rem 1.75rem; display: grid; gap: .3rem; }
+.tl:last-child { padding-bottom: 0; }
+.tl::before { content: ""; position: absolute; left: -.5rem; top: .3rem; width: .85rem; height: .85rem; border-radius: 50%; background: var(--bg); border: 2.5px solid var(--accent); }
+.band .tl::before { background: var(--surface); }
+.tl-k { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.tl-v { font-family: var(--display); font-size: 1.3rem; }
+.tl p { color: var(--muted); font-size: .96rem; }
+@media (max-width: 860px) { .case { grid-template-columns: 1fr; } }
+
+/* About */
+.about { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.portrait { aspect-ratio: 4 / 5; max-width: 100%; border-radius: 200px 200px 24px 24px; background: linear-gradient(160deg, var(--lav) 0%, var(--lav-strong) 100%); display: grid; place-items: center; color: var(--accent); position: relative; overflow: hidden; }
+.portrait svg { width: 40%; height: auto; opacity: .55; }
+.portrait-cap { position: absolute; bottom: 1rem; left: 1rem; right: 1rem; background: var(--card); border-radius: 14px; padding: .75rem 1rem; font-size: .85rem; color: var(--muted); box-shadow: var(--shadow); }
+.portrait-cap strong { display: block; color: var(--ink); font-size: .98rem; }
+.about-copy { display: grid; gap: 1.2rem; min-width: 0; }
+.about-copy p { color: var(--muted); max-width: 38rem; }
+.creds { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip { font-size: .85rem; font-weight: 600; background: var(--lav); border-radius: 999px; padding: .35rem .85rem; }
+@media (max-width: 860px) { .about { grid-template-columns: 1fr; } .portrait { max-width: 22rem; } }
+
+/* Testimonial */
+.quote { max-width: 50rem; margin: 0 auto; text-align: center; display: grid; gap: 1.5rem; justify-items: center; }
+.quote blockquote { margin: 0; font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2.15rem); line-height: 1.3; font-style: italic; text-wrap: balance; }
+.quote-who { display: flex; align-items: center; gap: .8rem; text-align: left; font-size: .92rem; color: var(--muted); }
+.quote-who strong { color: var(--ink); display: block; }
+.avatar { width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--lav-strong); }
+
+/* FAQ */
+.faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 5vw, 4rem); }
+.faq-list { display: grid; gap: .75rem; min-width: 0; }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 0 1.4rem; }
+details[open] { border-color: var(--lav-strong); }
+summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; padding: 1.15rem 0; font-weight: 600; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--display); font-size: 1.5rem; line-height: 1; color: var(--accent); transition: transform .2s; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { color: var(--muted); padding-bottom: 1.2rem; font-size: .98rem; }
+@media (max-width: 860px) { .faq { grid-template-columns: 1fr; } }
+
+/* Blog */
+.posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.post { display: grid; gap: .75rem; text-decoration: none; align-content: start; }
+.post-img { aspect-ratio: 16 / 10; max-width: 100%; border-radius: 16px; background: var(--lav); display: grid; place-items: center; color: var(--accent); }
+.post-img svg { width: 2.5rem; height: 2.5rem; opacity: .7; }
+.post-meta { font-size: .8rem; color: var(--muted); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.post h3 { font-size: 1.2rem; }
+.post:hover h3 { color: var(--accent); }
+@media (max-width: 860px) { .posts { grid-template-columns: 1fr; } }
+
+/* Booking */
+.book { background: var(--lav); border-radius: 28px; padding: clamp(2rem, 5vw, 3.5rem); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: start; }
+.book-copy { display: grid; gap: 1.1rem; min-width: 0; }
+.book-copy p { color: var(--muted); }
+.contact-lines { display: grid; gap: .5rem; font-size: .95rem; }
+.contact-lines div { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; }
+.contact-lines svg { width: 1.1rem; height: 1.1rem; color: var(--accent); flex: none; }
+.copy-btn { font: 600 .78rem var(--body); border: 1px solid var(--lav-strong); background: var(--card); color: var(--ink); border-radius: 999px; padding: .2rem .65rem; cursor: pointer; }
+.picker { background: var(--card); border-radius: 22px; padding: 1.5rem; box-shadow: var(--shadow); display: grid; gap: 1.1rem; min-width: 0; }
+.picker h3 { font-size: 1.15rem; }
+.days { display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; }
+.day, .slot { border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 12px; padding: .55rem .25rem; text-align: center; cursor: pointer; font: 600 .85rem var(--body); }
+.day small { display: block; font-weight: 500; color: var(--muted); font-size: .72rem; }
+.day[aria-pressed="true"], .slot[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.day[aria-pressed="true"] small { color: inherit; opacity: .8; }
+.slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+.picker-status { font-size: .9rem; color: var(--muted); min-height: 1.4em; }
+@media (max-width: 860px) { .book { grid-template-columns: 1fr; } }
+
+/* Footer */
+footer.site { border-top: 1px solid var(--line); padding-block: 3rem; font-size: .92rem; color: var(--muted); }
+.foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; }
+.foot h4 { margin: 0 0 .75rem; color: var(--ink); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.foot a { text-decoration: none; }
+.foot a:hover { color: var(--ink); }
+.foot-base { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: .85rem; }
+@media (max-width: 760px) { .foot { grid-template-columns: 1fr; } }
+
+/* Proposal annotations */
+.note { display: none; background: var(--note); color: var(--note-ink); font: 600 .78rem/1.4 var(--body); border-radius: 10px; padding: .45rem .7rem; width: fit-content; max-width: 100%; }
+.note b { font-weight: 800; }
+body.show-notes .note { display: block; }
+.todo { border-bottom: 2px dotted var(--accent); }
+.notes-toggle { position: fixed; z-index: 70; right: max(16px, calc(env(safe-area-inset-right, 0px) + 16px)); bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); display: flex; align-items: center; gap: .55rem; background: var(--ink); color: var(--bg); border: 0; border-radius: 999px; padding: .7rem 1.1rem; font: 600 .88rem var(--body); cursor: pointer; box-shadow: 0 10px 30px -8px rgba(30,20,70,.45); }
+.notes-toggle .pip { width: .6rem; height: .6rem; border-radius: 50%; background: var(--lav-strong); }
+body.show-notes .notes-toggle .pip { background: #F5C84B; }
+</style>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Andre Business Consulting, home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-name">Andre Business Consulting<small>Salon · Spa · Dental growth</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#who">Who it's for</a></li>
+      <li><a href="#packages">Coaching</a></li>
+      <li><a href="#case-study">Case study</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary hide-sm" href="#book">Book a free call</a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Business coach · Oakland, CA &amp; remote</span>
+        <h1>Business coaching for <em>salon, spa &amp; dental</em> practice owners</h1>
+        <p class="lede">The same systems that took a spa from $270K to $3M in annual revenue: pricing, booking, staffing and lead generation, installed in your business one step at a time.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#book">Book a free 15-minute call</a>
+          <a class="btn btn-ghost" href="#case-study">Read the $3M case study</a>
+        </div>
+        <div class="hero-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Built by an owner, not a theorist</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>1:1 coaching, no group courses</span>
+        </div>
+        <span class="note"><b>Audit fix #2 &amp; H1:</b> one audience, searchable H1 (was "Grow Your Revenue Fast"). Career-pivot copy removed from the homepage.</span>
+      </div>
+
+      <figure class="proof-card" aria-label="Revenue growth from $270K to $3M">
+        <div class="proof-top">
+          <span class="proof-label">Annual revenue</span>
+          <span class="proof-num">$270K<span>→</span>$3M</span>
+        </div>
+        <svg class="proof-chart" viewBox="0 0 400 190" role="img" aria-label="Rising revenue curve from $270K to $3M">
+          <line class="grid" x1="20" y1="40" x2="380" y2="40"/>
+          <line class="grid" x1="20" y1="95" x2="380" y2="95"/>
+          <line class="grid" x1="20" y1="150" x2="380" y2="150"/>
+          <path class="area" d="M30 150 C 120 148, 170 135, 230 105 S 330 48, 370 30 L 370 160 L 30 160 Z" opacity=".7"/>
+          <path class="line" d="M30 150 C 120 148, 170 135, 230 105 S 330 48, 370 30"/>
+          <circle class="dot" cx="30" cy="150" r="6"/>
+          <circle class="dot" cx="370" cy="30" r="6"/>
+          <text x="30" y="178">Start</text>
+          <text x="370" y="178" text-anchor="end">Today</text>
+        </svg>
+        <div class="proof-foot">
+          <div><strong>11×</strong>revenue growth</div>
+          <div><strong class="todo">[n]</strong>team members</div>
+          <div><strong class="todo">[n] yrs</strong>to get there</div>
+        </div>
+        <span class="note"><b>Client input:</b> confirm the true version of the story (own spa vs. client) plus team size and timeframe. Audit: the claim currently changes across pages.</span>
+      </figure>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section class="band" id="who">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Who it's for</span>
+        <h2>For owners who are fully booked and still not profitable enough</h2>
+        <p class="lede">You built a business people love. Now it runs on your energy. Coaching turns what lives in your head into systems your team can run.</p>
+      </div>
+      <div class="aud-grid">
+        <article class="aud">
+          <div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div>
+          <h3>Salon owners</h3>
+          <p>Move beyond chair rental math and build a salon that grows without you behind the chair.</p>
+          <ul><li>Service menu &amp; price increases</li><li>Rebooking and retail systems</li><li>Hiring and commission structure</li></ul>
+        </article>
+        <article class="aud">
+          <div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21c-4-3-7-6.5-7-10a7 7 0 0 1 14 0c0 3.5-3 7-7 10z"/><path d="M12 7v6M9 10h6"/></svg></div>
+          <h3>Med spa &amp; day spa owners</h3>
+          <p>Package treatments, fill the calendar with high-value clients and scale toward $1M and beyond.</p>
+          <ul><li>Memberships &amp; treatment packages</li><li>Lead generation that books consults</li><li>Front-desk and provider scripts</li></ul>
+        </article>
+        <article class="aud">
+          <div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 3c-2 0-3.5 1.6-3.5 4 0 3 1.3 5 2 8 .6 2.6 1 6 2.5 6s1.6-4 2.5-6c.4-.9.9-1.2 1.5-1.2s1.1.3 1.5 1.2c.9 2 1 6 2.5 6s1.9-3.4 2.5-6c.7-3 2-5 2-8 0-2.4-1.5-4-3.5-4-1.8 0-3 1-5 1s-3.2-1-5-1z"/></svg></div>
+          <h3>Dental practice owners</h3>
+          <p>Grow case acceptance and patient volume with a practice that runs on clear roles and numbers.</p>
+          <ul><li>New-patient acquisition</li><li>Treatment-plan follow-up</li><li>KPI dashboard for the team</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How coaching works</span>
+        <h2>Four stages, in the order they pay off</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="step-n">Stage 1</span><h3>Diagnose</h3><p>We go through your numbers, menu, schedule and team to find where revenue is leaking.</p></div>
+        <div class="step"><span class="step-n">Stage 2</span><h3>Price &amp; package</h3><p>Rebuild the service menu and memberships so every booked hour earns more.</p></div>
+        <div class="step"><span class="step-n">Stage 3</span><h3>Fill the calendar</h3><p>Set up lead generation, follow-up and rebooking so new clients arrive and come back.</p></div>
+        <div class="step"><span class="step-n">Stage 4</span><h3>Build the team</h3><p>Roles, scripts, KPIs and hiring so the business grows without you in every room.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="band" id="packages">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Coaching packages</span>
+        <h2>Pick the stage your business is in</h2>
+        <p class="lede">Every package starts with a free 15-minute call to make sure it's the right fit.</p>
+        <span class="note"><b>Audit fix #4:</b> each package gets who it's for, length, deliverables and a price range, then its own indexable page. Prices and lengths below are placeholders for the client.</span>
+      </div>
+      <div class="pkg-grid">
+        <article class="pkg">
+          <h3>Launchpad</h3>
+          <p class="pkg-for">For owners under $500K who want a clear plan and a better price list.</p>
+          <div class="pkg-price todo">From $[—]<small>/ month</small></div>
+          <span class="pkg-len">6 weeks</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Business &amp; numbers diagnostic</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>New service menu and pricing</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>90-day growth plan</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Weekly 1:1 calls</li>
+          </ul>
+          <a class="btn btn-ghost" href="#book">See if it fits</a>
+        </article>
+        <article class="pkg featured">
+          <span class="pkg-tag">Most chosen</span>
+          <h3>Scale Engine</h3>
+          <p class="pkg-for">For established businesses ready to add revenue streams and fill the book.</p>
+          <div class="pkg-price todo">From $[—]<small>/ month</small></div>
+          <span class="pkg-len">4 months</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Everything in Launchpad</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Lead generation &amp; follow-up system</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Memberships and packages launch</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Front-desk scripts &amp; KPI dashboard</li>
+          </ul>
+          <a class="btn btn-primary" href="#book">Book a fit call</a>
+        </article>
+        <article class="pkg">
+          <h3>Master Founder</h3>
+          <p class="pkg-for">For owners past $1M who want to step out of daily operations or open a second location.</p>
+          <div class="pkg-price todo">From $[—]<small>/ month</small></div>
+          <span class="pkg-len">6–12 months</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Everything in Scale Engine</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Leadership team and hiring plan</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Second-location or expansion playbook</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Direct text access between calls</li>
+          </ul>
+          <a class="btn btn-ghost" href="#book">See if it fits</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section id="case-study">
+    <div class="wrap case">
+      <div class="case-copy">
+        <span class="eyebrow">Case study</span>
+        <h2>How a small spa grew from $270K to $3M</h2>
+        <p class="lede">No viral moment and no outside investors. Just a sequence of unglamorous fixes, each one funding the next.</p>
+        <a class="btn btn-ghost" href="#book" style="width: fit-content;">Talk through your numbers</a>
+        <span class="note"><b>Audit fix #4 &amp; GEO:</b> a quotable, dated story with numbers is what AI assistants cite. Milestones are a structure for the client to fill with real figures.</span>
+      </div>
+      <div class="timeline">
+        <div class="tl"><span class="tl-k">Starting point</span><span class="tl-v">$270K / year</span><p>A small day spa, owner working every shift, discount-driven bookings and no follow-up.</p></div>
+        <div class="tl"><span class="tl-k">Fix 1 · Pricing</span><span class="tl-v todo">$[—] / year</span><p>Rebuilt the treatment menu, raised prices and introduced packages.</p></div>
+        <div class="tl"><span class="tl-k">Fix 2 · Calendar</span><span class="tl-v todo">$[—] / year</span><p>Added consult funnels, automated rebooking and a membership program.</p></div>
+        <div class="tl"><span class="tl-k">Fix 3 · Medical services</span><span class="tl-v todo">$[—] / year</span><p>Expanded into a medical spa with higher-value treatments and licensed providers.</p></div>
+        <div class="tl"><span class="tl-k">Today</span><span class="tl-v">$3M / year</span><p>A team-run business with clear roles, weekly KPIs and an owner who chooses where to spend time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="band" id="about">
+    <div class="wrap about">
+      <div class="portrait" role="img" aria-label="Portrait placeholder for the coach">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        <div class="portrait-cap"><strong class="todo">[Coach full name]</strong>Founder &amp; business coach · Oakland, CA</div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">About your coach</span>
+        <h2>I built the business first. Now I coach owners through the same climb.</h2>
+        <p>Before coaching, I ran a day spa that was stuck at $270K a year. Over <span class="todo">[n] years</span> my team and I grew it into a <span class="todo">[medical spa name]</span> doing $3M, by fixing pricing, building a reliable flow of new clients and hiring people who could run it without me.</p>
+        <p>Today I work 1:1 with salon, spa and dental owners across the Bay Area and remotely across the US. You get someone who has made payroll in your industry, not a framework from a book.</p>
+        <div class="creds">
+          <span class="chip">Former spa owner</span>
+          <span class="chip">$270K → $3M operator</span>
+          <span class="chip todo">[Certification]</span>
+          <span class="chip todo">[LinkedIn]</span>
+        </div>
+        <span class="note"><b>Audit fix #1 (Critical):</b> name, photo, story and credentials give Google E-E-A-T and give AI assistants an entity to describe. Also fixes the broken "My Path → #About Us" button.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section>
+    <div class="wrap quote">
+      <span class="eyebrow">From a client</span>
+      <blockquote class="todo">"[A named client quote about a specific result, for example: we raised prices 20% and our calendar stayed full.]"</blockquote>
+      <div class="quote-who"><span class="avatar" aria-hidden="true"></span><div><strong class="todo">[Client name]</strong>Owner, [Salon or spa], [City]</div></div>
+      <span class="note"><b>Weeks 2–4:</b> named testimonials, used with permission.</span>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="band" id="faq">
+    <div class="wrap faq">
+      <div class="section-head" style="margin-bottom: 0;">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions owners ask before the first call</h2>
+        <span class="note"><b>GEO:</b> clean Q&amp;A gives AI engines answers to lift. Mark up with FAQPage schema.</span>
+      </div>
+      <div class="faq-list">
+        <details open><summary>What does a salon or spa business coach actually do?</summary><p>A business coach works on the business side of your salon, spa or practice: pricing, marketing, booking, hiring and financial targets. You leave each session with specific changes to make that week, and we review the results together.</p></details>
+        <details><summary>Do you only work with businesses in the Bay Area?</summary><p>No. I'm based in Oakland, CA and meet East Bay and Bay Area clients in person when it helps, but most coaching happens over video with owners across the United States.</p></details>
+        <details><summary>How fast will I see results?</summary><p>Pricing and menu changes usually show up in revenue within the first 30 to 60 days. Lead generation and team systems take longer, typically one to two quarters, to compound.</p></details>
+        <details><summary>Do you work with dental practices too?</summary><p>Yes. Dental practices face the same problems as spas: an owner who does everything, uneven new-patient flow and unclear team roles. The systems carry over directly.</p></details>
+        <details><summary>What happens on the free 15-minute call?</summary><p>You tell me where the business is and where you want it to be. I'll tell you honestly whether coaching makes sense right now and which package fits. There is no pitch if it isn't a fit.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Growth blog</span>
+        <h2>Playbooks for salon, spa &amp; dental owners</h2>
+        <span class="note"><b>Content plan:</b> two posts a month answering real owner questions with first-hand numbers, each linking to a package page. Titles target the audit's keyword gaps.</span>
+      </div>
+      <div class="posts">
+        <a class="post" href="#blog">
+          <div class="post-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div>
+          <span class="post-meta">Pricing · 6 min read</span>
+          <h3>How to raise salon prices without losing your regulars</h3>
+        </a>
+        <a class="post" href="#blog">
+          <div class="post-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+          <span class="post-meta">Med spa · 8 min read</span>
+          <h3>What it takes to scale a med spa to $1M</h3>
+        </a>
+        <a class="post" href="#blog">
+          <div class="post-img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5"/></svg></div>
+          <span class="post-meta">Team · 5 min read</span>
+          <h3>Your first front-desk hire: the script and KPIs that matter</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section id="book" style="padding-top: 0;">
+    <div class="wrap">
+      <div class="book">
+        <div class="book-copy">
+          <span class="eyebrow">Free strategy call</span>
+          <h2>Book a free 15-minute call</h2>
+          <p>Pick a time that works. We'll look at where your business is today and whether coaching is the right next step.</p>
+          <div class="contact-lines">
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span id="email">hello@andrecoach.com</span><button class="copy-btn" id="copyEmail" type="button">Copy</button></div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Oakland, CA · Serving the Bay Area and US-wide</div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="todo">[Business phone]</span></div>
+          </div>
+          <span class="note"><b>Audit:</b> one email domain (was hello@andreconsulting.com on andrecoach.com), plus a phone number to match the Google Business Profile.</span>
+        </div>
+        <div class="picker" id="picker">
+          <h3>Choose a day</h3>
+          <div class="days" id="days"></div>
+          <h3>Choose a time <span style="font-weight:500;color:var(--muted);font-size:.85rem;">(Pacific)</span></h3>
+          <div class="slots" id="slots"></div>
+          <p class="picker-status" id="pickerStatus" aria-live="polite">Select a day and time.</p>
+          <button class="btn btn-primary" id="confirmBtn" type="button" disabled>Confirm call</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div style="display:grid;gap:.8rem;max-width:22rem;">
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">A</span><span class="brand-name">Andre Business Consulting</span></a>
+        <p>Business coaching for salon, spa and dental practice owners. Oakland, CA and remote across the United States.</p>
+      </div>
+      <div>
+        <h4>Coaching</h4>
+        <ul><li><a href="#packages">Launchpad</a></li><li><a href="#packages">Scale Engine</a></li><li><a href="#packages">Master Founder</a></li><li><a href="#case-study">Case study</a></li></ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul><li><a href="#book">Book a free call</a></li><li><a href="#about">About</a></li><li><a href="#blog">Blog</a></li><li class="todo">[LinkedIn profile]</li></ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Andre Business Consulting</span>
+      <span class="note" style="margin:0;"><b>Audit:</b> dead social links (bare facebook.com, x.com) removed; add only real profiles.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="notes-toggle" id="notesToggle" type="button" aria-pressed="false"><span class="pip" aria-hidden="true"></span><span id="notesLabel">Show audit notes</span></button>
+
+<script>
+(function () {
+  var root = document.documentElement;
+
+  // Theme toggle
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme');
+    var dark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', dark ? 'light' : 'dark');
+  });
+
+  // Mobile menu
+  var menuBtn = document.getElementById('menuBtn');
+  var links = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  // Audit notes toggle
+  var toggle = document.getElementById('notesToggle');
+  function setNotes(on) {
+    document.body.classList.toggle('show-notes', on);
+    toggle.setAttribute('aria-pressed', on);
+    document.getElementById('notesLabel').textContent = on ? 'Hide audit notes' : 'Show audit notes';
+    try { localStorage.setItem('andre-notes', on ? '1' : '0'); } catch (e) {}
+  }
+  toggle.addEventListener('click', function () { setNotes(!document.body.classList.contains('show-notes')); });
+  try { if (localStorage.getItem('andre-notes') === '1') setNotes(true); } catch (e) {}
+
+  // Copy email
+  document.getElementById('copyEmail').addEventListener('click', function () {
+    var btn = this, text = document.getElementById('email').textContent;
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+    var fallback = function () { var r = document.createRange(); r.selectNodeContents(document.getElementById('email')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected'; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback); else fallback();
+  });
+
+  // Booking picker (prototype only)
+  var daysEl = document.getElementById('days'), slotsEl = document.getElementById('slots');
+  var status = document.getElementById('pickerStatus'), confirmBtn = document.getElementById('confirmBtn');
+  var times = ['9:00 AM', '10:30 AM', '12:00 PM', '1:30 PM', '3:00 PM', '4:30 PM'];
+  var sel = { day: null, time: null, label: '' };
+  var d = new Date(), added = 0;
+  while (added < 5) {
+    d.setDate(d.getDate() + 1);
+    if (d.getDay() === 0 || d.getDay() === 6) continue;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'day'; b.setAttribute('aria-pressed', 'false');
+    var wd = d.toLocaleDateString('en-US', { weekday: 'short' }), md = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    b.innerHTML = wd + '<small>' + md + '</small>';
+    b.dataset.label = wd + ', ' + md;
+    b.dataset.seed = d.getDate();
+    daysEl.appendChild(b); added++;
+  }
+  function renderSlots(seed) {
+    slotsEl.innerHTML = '';
+    times.forEach(function (t, i) {
+      var s = document.createElement('button');
+      s.type = 'button'; s.className = 'slot'; s.textContent = t; s.setAttribute('aria-pressed', 'false');
+      if ((i + Number(seed)) % 4 === 0) { s.disabled = true; s.style.opacity = '.4'; s.style.cursor = 'not-allowed'; s.title = 'Booked'; }
+      slotsEl.appendChild(s);
+    });
+  }
+  function update() {
+    confirmBtn.disabled = !(sel.day && sel.time);
+    status.textContent = sel.day && sel.time ? sel.label + ' at ' + sel.time + ' Pacific' : sel.day ? 'Now pick a time.' : 'Select a day and time.';
+  }
+  daysEl.addEventListener('click', function (e) {
+    var b = e.target.closest('.day'); if (!b) return;
+    daysEl.querySelectorAll('.day').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+    sel.day = b; sel.label = b.dataset.label; sel.time = null;
+    renderSlots(b.dataset.seed); update();
+  });
+  slotsEl.addEventListener('click', function (e) {
+    var s = e.target.closest('.slot'); if (!s || s.disabled) return;
+    slotsEl.querySelectorAll('.slot').forEach(function (x) { x.setAttribute('aria-pressed', x === s); });
+    sel.time = s.textContent; update();
+  });
+  confirmBtn.addEventListener('click', function () {
+    status.textContent = 'Prototype: on the live site this hands off to the Wix booking calendar for ' + sel.label + ' at ' + sel.time + '.';
+  });
+  daysEl.querySelector('.day').click();
+})();
+</script>
